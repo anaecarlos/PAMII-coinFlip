@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coinFlip.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="black">
+            <Image 
+                x:Name="CoinImage"
+                Source="lado.png" 
+                WidthRequest="200"
+            />
+
+            <Label
+                Text=""
+                FontSize="Medium"
+                FontAttributes="Bold"
+                x:Name="ResultLabel"
+            />
+
+            <Picker x:Name="HeadTailsPicker"
+                Title="Selecione o lado da Moeda" 
+                >
+                <Picker.Items>
+                    <x:String>Cara</x:String>
+                    <x:String>Coroa</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button
+              x:Name="CoinFlipButton"
+              Text="Sortear a Moeda"
+              TextColor="White"
+              WidthRequest="200"
+              HeightRequest="10"
+              BackgroundColor="#483D8B"
+              Clicked="Button_Clicked"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
